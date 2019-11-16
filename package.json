@@ -1,0 +1,96 @@
+{
+  "name": "atomify",
+  "version": "0.0.1",
+  "description": "React Atoms Components Based On Ant Design",
+  "scripts": {
+    "analyse": "npm run build && npm run stats",
+    "stats": "./node_modules/.bin/rollup-plugin-visualizer stats.json",
+    "dev": "run-p build:watch start",
+    "start": "styleguidist server --open",
+    "styleguide:build": "styleguidist build",
+    "build": "rollup -c",
+    "build:watch": "rollup -c -w",
+    "test": "jest",
+    "test:coverage": "jest --coverage --forceExit --colors",
+    "lint": "esw --ext .jsx --ext .js --color",
+    "lint:fix": "npm run lint --fix",
+    "prepare": "npm run build",
+    "prerelease": "npm run lint:fix && npm run test:coverage && npm run build",
+    "release": "npm publish"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helabenkhalfallah/atomify.git"
+  },
+  "keywords": [
+    "react",
+    "antd",
+    "rollup"
+  ],
+  "author": "Ben Khalfallah Héla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helabenkhalfallah/atomify/issues"
+  },
+  "homepage": "https://github.com/helabenkhalfallah/atomify#readme",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@svgr/rollup": "^4.3.3"
+  },
+  "peerDependencies": {
+    "react": "=16.9.0",
+    "react-dom": "=16.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-jest": "^24.9.0",
+    "chai": "^4.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "node-sass": "=4.12.0",
+    "npm-run-all": "=4.1.5",
+    "prop-types": "=15.7.2",
+    "react": "=16.9.0",
+    "react-dom": "=16.9.0",
+    "react-styleguidist": "=9.1.16",
+    "rollup": "=1.20.3",
+    "rollup-plugin-babel": "=4.3.3",
+    "rollup-plugin-commonjs": "=10.1.0",
+    "rollup-plugin-node-resolve": "=5.2.0",
+    "rollup-plugin-peer-deps-external": "=2.2.0",
+    "rollup-plugin-postcss": "=2.0.3",
+    "rollup-plugin-terser": "=5.1.1",
+    "rollup-plugin-url": "=2.2.2",
+    "rollup-plugin-visualizer": "^3.0.6",
+    "webpack": "=4.39.3",
+    "webpack-blocks": "=2.0.1"
+  }
+}
