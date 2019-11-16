@@ -64,3 +64,5 @@ typings/
 stats.json
 stats.html
 
+# dist
+dist/*
