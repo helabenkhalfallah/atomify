@@ -1,1 +1,0 @@
-{"version":3,"file":"index.es.js","sources":["../src/lib/components/Button/Button.jsx"],"sourcesContent":["import React from 'react';\n\nconst Button = () => <span>Hello Button</span>;\n\nexport default Button;\n"],"names":["Button","React"],"mappings":"qBAEA,IAAMA,EAAS,kBAAMC"}
