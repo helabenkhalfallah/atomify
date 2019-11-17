@@ -28,8 +28,10 @@ Docker*
 
 coverage
 config
-demo
-public
-src
 scripts
 styleguide*
+
+storybook*
+.babelrc
+jest*
+.github
