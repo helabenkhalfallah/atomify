@@ -4,16 +4,11 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: {
-    main: [
-      '@babel/polyfill/noConflict',
-      path.resolve(__dirname, './src/lib/index.js'),
-    ],
-  },
+  entry: './src/lib/index.js',
   output: {
-    publicPath: '/',
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js',
+    publicPath: path.resolve(__dirname, './public'),
+    filename: 'atomify-bundle.js',
   },
   module: {
     rules: [

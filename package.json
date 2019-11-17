@@ -1,6 +1,6 @@
 {
   "name": "atomify-kit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "./src/lib/index.js",
   "description": "React Atoms Components Based On Ant Design",
   "scripts": {
@@ -52,6 +52,7 @@
     "@babel/core": "=7.6.0",
     "@babel/plugin-proposal-class-properties": "=7.7.0",
     "@babel/plugin-syntax-dynamic-import": "=7.2.0",
+    "@babel/plugin-transform-react-jsx": "^7.7.0",
     "@babel/polyfill": "=7.7.0",
     "@babel/preset-env": "=7.6.0",
     "@babel/preset-react": "=7.0.0",
