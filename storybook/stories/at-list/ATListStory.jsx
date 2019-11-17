@@ -9,7 +9,7 @@ import {
   ATList,
   ATListItem,
   ATListItemMeta,
-  ATInfiniteList,
+  // ATInfiniteList,
 } from '../../../src/lib';
 import './ATListStory.less';
 

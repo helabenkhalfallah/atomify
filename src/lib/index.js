@@ -2,7 +2,6 @@ import ATButton from './components/at-button/ATButton';
 import ATCheckbox from './components/at-checkbox/ATCheckbox';
 import ATInput from './components/at-input/ATInput';
 import ATInputSearch from './components/at-input/ATInputSearch';
-import ATTabs from './components/at-tabs/ATTabs';
 import ATInputPassword from './components/at-input/ATInputPassword';
 import ATCard from './components/at-card/ATCard';
 import ATCardGrid from './components/at-card/ATCardGrid';
@@ -18,8 +17,12 @@ import ATList from './components/at-list/ATList';
 import ATListItem from './components/at-list/ATListItem';
 import ATListItemMeta from './components/at-list/ATListItemMeta';
 import ATInfiniteList from './components/at-list/ATInfiniteList';
+import ATTabs from './components/at-tabs/ATTabs';
+import ATTabPane from './components/at-tabs/ATTabPane';
 
 export {
+  ATTabs,
+  ATTabPane,
   ATList,
   ATListItem,
   ATListItemMeta,
@@ -38,6 +41,5 @@ export {
   ATCheckbox,
   ATInput,
   ATInputPassword,
-  ATInputSearch,
-  ATTabs
+  ATInputSearch
 }
