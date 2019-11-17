@@ -13,6 +13,7 @@ const {
   ATInputStory,
   ATCardStory,
   ATGridStory,
+  ATLayoutStory,
   /* ATListStory,
   ATTabsStory, */
 } = Components;
@@ -24,7 +25,8 @@ stories
   .add('ATCheckbox', withReadme(...ATCheckboxStory))
   .add('ATInput', withReadme(...ATInputStory))
   .add('ATCard', withReadme(...ATCardStory))
-  .add('ATGrid', withReadme(...ATGridStory));
+  .add('ATGrid', withReadme(...ATGridStory))
+  .add('ATLayout', withReadme(...ATLayoutStory));
 
 
 /*
