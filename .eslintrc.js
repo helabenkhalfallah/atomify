@@ -3,10 +3,8 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: [
-    'airbnb',
-    "plugin:react/recommended"
-  ],
+  extends: "airbnb",
+  parser: 'babel-eslint',
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -20,7 +18,41 @@ module.exports = {
   },
   plugins: [
     'react',
+    'jsx-a11y'
   ],
   rules: {
+    "react/jsx-props-no-spreading": "off",
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "max-len": [1, 120, 2, { ignoreComments: true }],
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "quotes": [
+      2,
+      "single",
+    ],
+    "comma-dangle": [
+      2,
+      "always-multiline"
+    ],
+    "operator-linebreak": [
+      2,
+      "before",
+      {
+        "overrides": {
+          "&&": "after",
+          "?": "after",
+          ":": "after"
+        }
+      }
+    ],
+    "no-console": "error"
   },
 };

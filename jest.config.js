@@ -6,7 +6,6 @@ module.exports = {
   ],
   resolver: 'jest-pnp-resolver',
   setupFiles: [
-    'react-app-polyfill/jsdom',
     '<rootDir>/jest-config/enzymeConfig.js',
   ],
   testMatch: [
@@ -25,7 +24,6 @@ module.exports = {
     '^.+\\.module\\.(css|sass|scss)$',
   ],
   moduleDirectories: [
-    'node_modules',
     'src',
   ],
   moduleNameMapper: {
@@ -45,4 +43,3 @@ module.exports = {
     'node',
   ],
 };
-

@@ -1,6 +1,5 @@
-import Button from './components/Button/Button';
+import AButton from './components/Button/AButton';
 
 export {
-  // eslint-disable-next-line import/prefer-default-export
-  Button,
-};
+  AButton
+}
