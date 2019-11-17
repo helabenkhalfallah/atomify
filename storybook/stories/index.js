@@ -8,13 +8,13 @@ import ATGridStory from "./at-grid/ATGridStory";
 import ATLayoutStory from './at-layout/ATLayoutStory';
 
 const Stories = {
+  ATListStory,
   ATLayoutStory,
   ATGridStory,
   ATCardStory,
   ATButtonStory,
   ATCheckboxStory,
   ATInputStory,
-  ATListStory,
   ATTabsStory
 };
 

@@ -14,8 +14,8 @@ const {
   ATCardStory,
   ATGridStory,
   ATLayoutStory,
-  /* ATListStory,
-  ATTabsStory, */
+  ATListStory,
+  /* ATTabsStory, */
 } = Components;
 
 // prepare story board
@@ -25,10 +25,10 @@ stories
   .add('ATCheckbox', withReadme(...ATCheckboxStory))
   .add('ATInput', withReadme(...ATInputStory))
   .add('ATCard', withReadme(...ATCardStory))
+  .add('ATList', withReadme(...ATListStory))
   .add('ATGrid', withReadme(...ATGridStory))
   .add('ATLayout', withReadme(...ATLayoutStory));
 
 
 /*
-.add('ATList', withReadme(...ATListStory))
 .add('ATTabs', withReadme(...ATTabsStory)) */

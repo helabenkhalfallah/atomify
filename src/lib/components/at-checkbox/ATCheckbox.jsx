@@ -1,6 +1,5 @@
 import React from 'react';
 import { Checkbox } from 'antd';
-import 'antd/es/checkbox/style';
 import ViewUtils from '../../utils/ViewUtils';
 
 const {
