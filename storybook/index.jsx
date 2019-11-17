@@ -7,9 +7,26 @@ import Components from './stories';
 
 // stories
 const stories = storiesOf('Atomify UI Kit', module);
-const { ATButtonStory } = Components;
+const {
+  ATButtonStory,
+  ATCheckboxStory,
+  ATInputStory,
+  ATCardStory,
+  ATGridStory,
+  /* ATListStory,
+  ATTabsStory, */
+} = Components;
 
 // prepare story board
 stories
   .addDecorator((story, context) => story(context))
-  .add('ATButton', withReadme(...ATButtonStory));
+  .add('ATButton', withReadme(...ATButtonStory))
+  .add('ATCheckbox', withReadme(...ATCheckboxStory))
+  .add('ATInput', withReadme(...ATInputStory))
+  .add('ATCard', withReadme(...ATCardStory))
+  .add('ATGrid', withReadme(...ATGridStory));
+
+
+/*
+.add('ATList', withReadme(...ATListStory))
+.add('ATTabs', withReadme(...ATTabsStory)) */

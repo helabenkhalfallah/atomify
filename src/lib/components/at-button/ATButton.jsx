@@ -1,23 +1,17 @@
 import React from 'react';
 import { Button } from 'antd';
 import 'antd/es/button/style';
-import './ATButton.less';
+import ViewUtils from '../../utils/ViewUtils';
 
-const subViews = (children) => {
-  if (children) {
-    if (Array.isArray(children)) {
-      return children;
-    }
-    return [children];
-  }
-  return null;
-};
+const {
+  renderSubViews,
+} = ViewUtils;
 
 const ATButton = (props) => {
   const {
     children,
   } = props || {};
-  const buttonSubViews = subViews(children);
+  const buttonSubViews = renderSubViews(children);
   return (
     <Button
       {...props}

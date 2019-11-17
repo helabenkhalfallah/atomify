@@ -32,13 +32,21 @@ const ATButtonStory = () => (
     >
       Dashed Button
     </ATButton>
-    <ATButton
-      className="atomify-stories-atbutton__button"
-      type="primary"
-      ghost
-    >
-      Primary Ghost
-    </ATButton>
+    <div className="atomify-stories-atbutton__button--ghost-container">
+      <ATButton
+        className="atomify-stories-atbutton__button--ghost"
+        ghost
+      >
+        Ghost
+      </ATButton>
+      <ATButton
+        className="atomify-stories-atbutton__button--ghost"
+        type="dashed"
+        ghost
+      >
+        Dashed Ghost
+      </ATButton>
+    </div>
     <ATButton
       className="atomify-stories-atbutton__button"
       type="link"
@@ -49,7 +57,7 @@ const ATButtonStory = () => (
       className="atomify-stories-atbutton__button"
       type="primary"
       shape="round"
-      icon="download"
+      loading
     >
       Loading
     </ATButton>
@@ -76,6 +84,13 @@ const ATButtonStory = () => (
     >
       Primary disabled
     </ATButton>
+    <ATButton
+      className="atomify-stories-atbutton__button"
+      type="danger"
+      shape="circle"
+      icon="poweroff"
+    />
+
   </div>
 );
 

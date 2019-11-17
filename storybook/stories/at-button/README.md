@@ -6,7 +6,7 @@ https://ant.design/components/button/
 
 # Props :
 
-Proptypes fro ATButton are the same as ant design Button :
+Proptypes for ATButton are the same as ant design Button :
 
 https://ant.design/components/button/#API
 
