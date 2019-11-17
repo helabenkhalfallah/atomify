@@ -1,5 +1,5 @@
 {
-  "name": "atomify",
+  "name": "atomify-kit",
   "version": "0.0.1",
   "main": "./src/lib/index.js",
   "description": "React Atoms Components Based On Ant Design",
