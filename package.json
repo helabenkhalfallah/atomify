@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js --mode production",
     "test": "test",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook -p 9001 -c ./storybook/.storybook",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
@@ -54,6 +55,13 @@
     "@babel/polyfill": "=7.7.0",
     "@babel/preset-env": "=7.6.0",
     "@babel/preset-react": "=7.0.0",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-info": "^5.2.6",
+    "@storybook/addon-knobs": "^5.2.6",
+    "@storybook/addon-links": "^5.2.6",
+    "@storybook/addon-options": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
     "@storybook/react": "^5.2.6",
     "babel-eslint": "=10.0.3",
     "babel-loader": "=8.0.6",
@@ -72,6 +80,7 @@
     "react": "=16.12.0",
     "react-dom": "=16.12.0",
     "sass-loader": "=8.0.0",
+    "storybook-readme": "^5.0.8",
     "style-loader": "=1.0.0",
     "webpack": "=4.40.2",
     "webpack-bundle-analyzer": "=3.5.1",

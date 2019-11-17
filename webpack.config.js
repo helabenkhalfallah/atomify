@@ -55,7 +55,7 @@ module.exports = {
             loader: 'less-loader', // compiles Less to CSS
             options: {
               modifyVars: {
-                hack: `true; @import "${path.resolve(__dirname, './src/styles/AtomifyStyle.less')}";`,
+                hack: `true; @import "${path.resolve(__dirname, './src/styles/variables.less')}";`,
               },
               javascriptEnabled: true,
             },

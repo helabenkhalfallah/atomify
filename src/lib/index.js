@@ -1,5 +1,5 @@
-import AButton from './components/Button/AButton';
+import ATButton from './components/at-button/ATButton';
 
 export {
-  AButton
+  ATButton
 }
