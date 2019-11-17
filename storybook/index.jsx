@@ -8,6 +8,7 @@ import Components from './stories';
 // stories
 const stories = storiesOf('Atomify UI Kit', module);
 const {
+  ATColorPalette,
   ATButtonStory,
   ATCheckboxStory,
   ATInputStory,
@@ -21,6 +22,7 @@ const {
 // prepare story board
 stories
   .addDecorator((story, context) => story(context))
+  .add('Color Palette', withReadme(...ATColorPalette))
   .add('ATButton', withReadme(...ATButtonStory))
   .add('ATCheckbox', withReadme(...ATCheckboxStory))
   .add('ATInput', withReadme(...ATInputStory))
