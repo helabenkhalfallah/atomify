@@ -1,5 +1,6 @@
 const path = require('path');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -8,6 +9,11 @@ module.exports = {
       '@babel/polyfill/noConflict',
       path.resolve(__dirname, './src/lib/index.js'),
     ],
+  },
+  output: {
+    publicPath: '/',
+    path: path.resolve(__dirname, './dist'),
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -78,13 +84,28 @@ module.exports = {
       '.jsx',
     ],
   },
-  output: {
-    publicPath: '/',
-    path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js',
-  },
   plugins: [
     new BundleAnalyzerPlugin(),
   ],
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        cache: true,
+        parallel: true,
+        terserOptions: {
+          compress: {
+            dead_code: true,
+            conditionals: true,
+            booleans: true,
+          },
+          module: false,
+          output: {
+            comments: false,
+            beautify: false,
+          },
+        },
+      }),
+    ],
+  },
   target: 'web',
 };
