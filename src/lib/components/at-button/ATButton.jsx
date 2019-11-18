@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
-import ViewUtils from '../../utils/ViewUtils';
+import ViewUtils from '../utils/ViewUtils';
 
 const {
   renderSubViews,
