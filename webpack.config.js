@@ -8,7 +8,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'atomify-bundle.js',
-    libraryTarget: 'commonjs2',
   },
   module: {
     rules: [
