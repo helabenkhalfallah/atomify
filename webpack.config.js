@@ -7,8 +7,8 @@ module.exports = {
   entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: path.resolve(__dirname, './public'),
     filename: 'atomify-bundle.js',
+    libraryTarget: 'commonjs2',
   },
   module: {
     rules: [
@@ -102,5 +102,4 @@ module.exports = {
       }),
     ],
   },
-  target: 'web',
 };
