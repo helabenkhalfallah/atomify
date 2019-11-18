@@ -8,6 +8,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'atomify-bundle.js',
+    library: 'atomify',
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -54,9 +57,6 @@ module.exports = {
           {
             loader: 'less-loader', // compiles Less to CSS
             options: {
-              modifyVars: {
-                hack: `true; @import "${path.resolve(__dirname, './src/styles/variables.less')}";`,
-              },
               javascriptEnabled: true,
             },
           },

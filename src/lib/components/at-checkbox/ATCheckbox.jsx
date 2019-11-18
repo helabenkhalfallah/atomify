@@ -1,6 +1,7 @@
 import React from 'react';
 import { Checkbox } from 'antd';
 import ViewUtils from '../utils/ViewUtils';
+import 'antd/es/checkbox/style';
 
 const {
   renderSubViews,

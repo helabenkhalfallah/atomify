@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import ViewUtils from '../utils/ViewUtils';
+import 'antd/es/button/style';
 
 const {
   renderSubViews,

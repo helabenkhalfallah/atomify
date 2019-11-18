@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tabs } from 'antd';
+import 'antd/es/tabs/style';
 
 const {
   TabPane,
