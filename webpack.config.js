@@ -87,13 +87,6 @@ module.exports = {
       amd: 'react-dom',
       umd: 'react-dom',
     },
-    antd: {
-      root: 'antd',
-      commonjs2: 'antd',
-      commonjs: 'antd',
-      amd: 'antd',
-      umd: 'antd',
-    },
   },
   resolve: {
     extensions: [
