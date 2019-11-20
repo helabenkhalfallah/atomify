@@ -1,5 +1,6 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: 'production',
@@ -62,13 +63,6 @@ module.exports = {
           },
         ],
       },
-      {
-        loader: 'webpack-ant-icon-loader',
-        enforce: 'pre',
-        include: [
-          require.resolve('@ant-design/icons/lib/dist'),
-        ],
-      },
     ],
   },
   externals: {
@@ -86,6 +80,13 @@ module.exports = {
       amd: 'react-dom',
       umd: 'react-dom',
     },
+    antd: {
+      root: 'antd',
+      commonjs2: 'antd',
+      commonjs: 'antd',
+      amd: 'antd',
+      umd: 'antd',
+    },
   },
   resolve: {
     extensions: [
@@ -94,6 +95,9 @@ module.exports = {
       '.jsx',
     ],
   },
+  plugins: [
+    new BundleAnalyzerPlugin(),
+  ],
   optimization: {
     minimizer: [
       new TerserPlugin({
