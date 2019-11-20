@@ -1,5 +1,4 @@
 const path = require('path');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
@@ -78,9 +77,6 @@ module.exports = {
       '.jsx',
     ],
   },
-  plugins: [
-    new BundleAnalyzerPlugin(),
-  ],
   optimization: {
     minimizer: [
       new TerserPlugin({
