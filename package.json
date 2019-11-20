@@ -1,7 +1,7 @@
 {
   "name": "atomify-kit",
-  "version": "1.0.2",
-  "main": "./src/lib/index.js",
+  "version": "1.0.3",
+  "main": "dist/index.js",
   "description": "React Atoms Components Based On Ant Design",
   "scripts": {
     "build": "webpack --config webpack.config.js --mode production",
@@ -16,9 +16,7 @@
   },
   "files": [
     "dist",
-    "lib",
-    "package.json",
-    "webpack.config.js",
+    "src",
     "README.md"
   ],
   "repository": {
@@ -40,10 +38,11 @@
     "node": ">=8",
     "npm": ">=5"
   },
-  "dependencies": {},
-  "peerDependencies": {
+  "dependencies": {
     "antd": "=3.25.1",
-    "webpack-ant-icon-loader": "=1.0.8",
+    "webpack-ant-icon-loader": "=1.0.8"
+  },
+  "peerDependencies": {
     "react": "=16.12.0",
     "react-dom": "=16.12.0",
     "css-loader": "=3.2.0",
@@ -84,8 +83,6 @@
     "html-loader": "=0.5.5",
     "less": "=3.10.3",
     "less-loader": "=5.0.0",
-    "antd": "=3.25.1",
-    "webpack-ant-icon-loader": "=1.0.8",
     "prop-types": "=15.7.2",
     "react": "=16.12.0",
     "react-dom": "=16.12.0",

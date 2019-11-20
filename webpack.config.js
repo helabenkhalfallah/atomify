@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'atomify-kit-bundle.js',
+    filename: 'index.js',
     library: 'atomify-kit',
     libraryTarget: 'umd',
     publicPath: '/dist/',
@@ -85,13 +85,6 @@ module.exports = {
       commonjs: 'react-dom',
       amd: 'react-dom',
       umd: 'react-dom',
-    },
-    antd: {
-      root: 'antd',
-      commonjs2: 'antd',
-      commonjs: 'antd',
-      amd: 'antd',
-      umd: 'antd',
     },
   },
   resolve: {
