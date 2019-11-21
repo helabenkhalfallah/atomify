@@ -1,7 +1,7 @@
 {
   "name": "atomify-kit",
-  "version": "1.1.0",
-  "main": "dist/index.js",
+  "version": "1.1.1",
+  "main": "dist/atomify-kit.js",
   "description": "React Atoms Components Based On Ant Design",
   "scripts": {
     "build": "webpack --config webpack.config.js --mode production",
