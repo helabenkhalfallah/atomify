@@ -107,10 +107,6 @@ module.exports = {
     // new BundleAnalyzerPlugin(),
   ],
   optimization: {
-    minimize: true,
-    splitChunks: {
-      chunks: 'all'
-    },
     minimizer: [
       new TerserPlugin({
         cache: true,
