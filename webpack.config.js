@@ -8,7 +8,7 @@ module.exports = {
   entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'atomify-kit.js',
+    filename: 'index.js',
     library: 'atomify-kit',
     libraryTarget: 'umd',
     publicPath: '/dist/',
