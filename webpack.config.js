@@ -1,6 +1,7 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -49,9 +50,7 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
-          {
-            loader: 'style-loader', // creates style nodes from JS strings
-          },
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader', // translates CSS into CommonJS
           },
@@ -96,7 +95,10 @@ module.exports = {
     ],
   },
   plugins: [
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
+    new MiniCssExtractPlugin({
+      filename: './css/[name].css',
+    }),
   ],
   optimization: {
     minimizer: [
