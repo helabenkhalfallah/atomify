@@ -1,14 +1,14 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
   entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'index.js',
+    filename: 'atomify-kit.js',
     library: 'atomify-kit',
     libraryTarget: 'umd',
     publicPath: '/dist/',
@@ -34,7 +34,10 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
       },
       {
         test: /\.s[ac]ss$/i,
@@ -50,7 +53,6 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
-          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader', // translates CSS into CommonJS
           },
@@ -65,6 +67,9 @@ module.exports = {
       {
         loader: 'webpack-ant-icon-loader',
         enforce: 'pre',
+        options: {
+          chunkName: 'antd-icons', // default is antd-icons
+        },
         include: [
           require.resolve('@ant-design/icons/lib/dist'),
         ],
@@ -93,14 +98,19 @@ module.exports = {
       '.js',
       '.jsx',
     ],
+    alias: {
+      moment: `moment/moment.js`
+    },
   },
   plugins: [
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru/),
     // new BundleAnalyzerPlugin(),
-    new MiniCssExtractPlugin({
-      filename: './css/[name].css',
-    }),
   ],
   optimization: {
+    minimize: true,
+    splitChunks: {
+      chunks: 'all'
+    },
     minimizer: [
       new TerserPlugin({
         cache: true,
