@@ -2,6 +2,7 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -35,6 +36,7 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
+          MiniCssExtractPlugin.loader,
           'style-loader',
           'css-loader',
         ],
@@ -42,6 +44,7 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
+          MiniCssExtractPlugin.loader,
           // Creates `style` nodes from JS strings
           'style-loader',
           // Translates CSS into CommonJS
@@ -53,6 +56,7 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader', // translates CSS into CommonJS
           },
@@ -62,16 +66,6 @@ module.exports = {
               javascriptEnabled: true,
             },
           },
-        ],
-      },
-      {
-        loader: 'webpack-ant-icon-loader',
-        enforce: 'pre',
-        options: {
-          chunkName: 'antd-icons', // default is antd-icons
-        },
-        include: [
-          require.resolve('@ant-design/icons/lib/dist'),
         ],
       },
     ],
@@ -104,6 +98,9 @@ module.exports = {
   },
   plugins: [
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru/),
+    new MiniCssExtractPlugin({
+      filename: './css/[name].css',
+    }),
     // new BundleAnalyzerPlugin(),
   ],
   optimization: {
