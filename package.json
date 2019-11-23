@@ -1,11 +1,10 @@
 {
   "name": "atomify-kit",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "main": "dist/index.js",
   "description": "React Atoms Components Based On Ant Design",
   "scripts": {
-    "build": "webpack --config webpack.config.js --mode production",
-    "test": "test",
+    "parcel-build": "parcel build --experimental-scope-hoisting ./src/lib/index.js",
     "storybook": "start-storybook -p 9001 -c ./storybook/.storybook",
     "build-storybook": "build-storybook"
   },
@@ -15,7 +14,8 @@
     }
   },
   "files": [
-    "dist/*",
+    "dist/index.css",
+    "dist/index.js",
     "src",
     "README.md"
   ],
@@ -38,20 +38,11 @@
     "node": ">=8",
     "npm": ">=5"
   },
-  "dependencies": {
-    "antd": "=3.25.2",
-    "webpack-ant-icon-loader": "=1.0.8"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "=16.12.0",
     "react-dom": "=16.12.0",
-    "css-loader": "=3.2.0",
-    "html-loader": "=0.5.5",
-    "less": "=3.10.3",
-    "less-loader": "=5.0.0",
-    "sass-loader": "=8.0.0",
-    "style-loader": "=1.0.0",
-    "webpack": "=4.40.2"
+    "prop-types": "=15.7.2"
   },
   "devDependencies": {
     "@babel/core": "=7.6.0",
@@ -70,7 +61,8 @@
     "@storybook/addon-options": "=5.2.6",
     "@storybook/addons": "=5.2.6",
     "@storybook/react": "=5.2.6",
-    "antd": "=3.25.1",
+    "antd": "=3.25.2",
+    "autoprefixer": "=9.7.2",
     "babel-eslint": "=10.0.3",
     "babel-loader": "=8.0.6",
     "babel-plugin-import": "=1.12.2",
@@ -81,20 +73,16 @@
     "eslint-plugin-jsx-a11y": "=6.2.3",
     "eslint-plugin-react": "=7.16.0",
     "eslint-plugin-react-hooks": "=1.7.0",
-    "html-loader": "=0.5.5",
     "less": "=3.10.3",
     "less-loader": "=5.0.0",
-    "mini-css-extract-plugin": "=0.8.0",
-    "prop-types": "=15.7.2",
+    "parcel-bundler": "=1.12.4",
+    "parcel-plugin-bundle-visualiser": "=1.2.0",
+    "parcel-plugin-less-js-enabled": "=1.0.2",
+    "postcss-modules": "=1.4.1",
     "react": "=16.12.0",
     "react-dom": "=16.12.0",
-    "sass-loader": "=8.0.0",
     "storybook-readme": "=5.0.8",
     "style-loader": "=1.0.0",
-    "terser-webpack-plugin": "=2.2.1",
-    "webpack": "=4.40.2",
-    "webpack-bundle-analyzer": "=3.5.1",
-    "webpack-cli": "=3.3.9",
-    "webpack-dev-server": "=3.8.1"
+    "terser-webpack-plugin": "=2.2.1"
   }
 }

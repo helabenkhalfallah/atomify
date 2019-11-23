@@ -9,9 +9,6 @@ module.exports = ({ config }) => {
     }, {
       loader: "less-loader",
       options: {
-        modifyVars: {
-          hack: `true; @import "${path.resolve(__dirname, '../../src/styles/variables.less')}";`,
-        },
         javascriptEnabled: true,
       },
     }]

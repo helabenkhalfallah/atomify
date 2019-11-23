@@ -19,7 +19,7 @@ import ATListItemMeta from './components/at-list/ATListItemMeta';
 import ATInfiniteList from './components/at-list/ATInfiniteList';
 import ATTabs from './components/at-tabs/ATTabs';
 import ATTabPane from './components/at-tabs/ATTabPane';
-import '../styles/variables.less'
+import '../styles/variables.less';
 
 export {
   ATTabs,

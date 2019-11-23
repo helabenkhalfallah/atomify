@@ -67,3 +67,4 @@ stats.html
 # dist
 dist/*
 storybook-static
+.cache
