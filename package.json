@@ -1,12 +1,13 @@
 {
   "name": "atomify-kit",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "main": "dist/index.js",
   "description": "React Atoms Components Based On Ant Design",
   "scripts": {
     "build": "webpack --config webpack.config.js --mode production",
     "storybook": "start-storybook -p 9001 -c ./storybook/.storybook",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepublish": "npm run build"
   },
   "husky": {
     "hooks": {
@@ -14,8 +15,7 @@
     }
   },
   "files": [
-    "dist/index.css",
-    "dist/index.js",
+    "dist/*",
     "src",
     "README.md"
   ],

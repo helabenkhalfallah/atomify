@@ -1,7 +1,7 @@
 module.exports = {
   plugins: {
     'postcss-prefix-selector': {
-      prefix: '.atomify-116',
+      prefix: '.atomify-117',
     },
     'postcss-import': {},
     'postcss-preset-env': {
