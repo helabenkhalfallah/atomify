@@ -1,8 +1,9 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -39,7 +40,6 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'style-loader',
           'css-loader',
-          'postcss-loader',
         ],
       },
       {
@@ -52,7 +52,6 @@ module.exports = {
           'css-loader',
           // Compiles Sass to CSS
           'sass-loader',
-          'postcss-loader',
         ],
       },
       {
@@ -62,7 +61,6 @@ module.exports = {
           {
             loader: 'css-loader', // translates CSS into CommonJS
           },
-          'postcss-loader',
           {
             loader: 'less-loader', // compiles Less to CSS
             options: {
@@ -104,9 +102,18 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: './css/[name].css',
     }),
-    // new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
   optimization: {
+    removeEmptyChunks: true,
+    mergeDuplicateChunks: true,
+    runtimeChunk: {
+      name: (entrypoint) => `runtime-${entrypoint.name}`,
+    },
+    splitChunks: {
+      chunks: 'all',
+      name: false,
+    },
     minimizer: [
       new TerserPlugin({
         cache: true,
@@ -124,6 +131,7 @@ module.exports = {
           },
         },
       }),
+      new OptimizeCSSAssetsPlugin({}),
     ],
   },
 };
