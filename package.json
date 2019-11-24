@@ -1,8 +1,7 @@
 {
   "name": "atomify-kit",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "main": "dist/index.js",
-  "module": "src/index.js",
   "description": "React Atoms Components Based On Ant Design",
   "scripts": {
     "build": "webpack --config webpack.config.js --mode production",
@@ -70,7 +69,6 @@
     "@storybook/addons": "=5.2.6",
     "@storybook/react": "=5.2.6",
     "antd": "=3.25.2",
-    "autoprefixer": "=9.7.2",
     "babel-eslint": "=10.0.3",
     "babel-loader": "=8.0.6",
     "babel-plugin-import": "=1.12.2",
