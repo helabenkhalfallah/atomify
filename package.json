@@ -1,9 +1,7 @@
 {
   "name": "atomify-kit",
-  "version": "1.2.1",
-  "main": "lib/index.js",
-  "module": "es/index.js",
-  "jsnext:main": "es/index.js",
+  "version": "1.2.2",
+  "main": "src/index.js",
   "description": "React Atoms Components Based On Ant Design",
   "scripts": {
     "build": "webpack --config webpack.config.js --mode production",
@@ -18,15 +16,8 @@
   },
   "files": [
     "dist",
-    "lib",
-    "es",
-    "src"
-  ],
-  "sideEffects": [
-    "dist/*",
-    "es/**/style/*",
-    "lib/**/style/*",
-    "*.less"
+    "src",
+    "README"
   ],
   "browserslist": [
     "last 2 version",
@@ -68,6 +59,7 @@
     "@babel/polyfill": "=7.7.0",
     "@babel/preset-env": "=7.6.0",
     "@babel/preset-react": "=7.0.0",
+    "@purtuga/esm-webpack-plugin": "^1.1.1",
     "@storybook/addon-actions": "=5.2.6",
     "@storybook/addon-console": "=1.2.1",
     "@storybook/addon-info": "=5.2.6",
