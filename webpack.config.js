@@ -1,9 +1,8 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const EsmWebpackPlugin = require("@purtuga/esm-webpack-plugin");
 
 module.exports = {
   mode: 'production',
@@ -12,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'index.js',
     library: 'atomify-kit',
-    libraryTarget: 'var',
+    libraryTarget: 'umd',
     publicPath: '/dist/',
     umdNamedDefine: true,
   },
@@ -102,8 +101,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: './css/[name].css',
     }),
-    new EsmWebpackPlugin(),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
   optimization: {
     minimizer: [
