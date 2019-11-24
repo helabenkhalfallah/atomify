@@ -3,7 +3,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -105,15 +104,6 @@ module.exports = {
     // new BundleAnalyzerPlugin(),
   ],
   optimization: {
-    removeEmptyChunks: true,
-    mergeDuplicateChunks: true,
-    runtimeChunk: {
-      name: (entrypoint) => `runtime-${entrypoint.name}`,
-    },
-    splitChunks: {
-      chunks: 'all',
-      name: false,
-    },
     minimizer: [
       new TerserPlugin({
         cache: true,
@@ -131,7 +121,6 @@ module.exports = {
           },
         },
       }),
-      new OptimizeCSSAssetsPlugin({}),
     ],
   },
 };
