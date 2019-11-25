@@ -21,4 +21,3 @@ export { default as ATListItemMeta } from './at-list-item-meta/ATListItemMeta';
 export { default as ATInfiniteList } from './at-list-infinite/ATInfiniteList';
 export { default as ATTabs } from './at-tabs/ATTabs';
 export { default as ATTabPane } from './at-tabs-pane/ATTabPane';
-import '../styles/variables.less';
