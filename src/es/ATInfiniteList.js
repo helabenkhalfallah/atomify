@@ -1,2 +1,2 @@
-import { ATInfiniteList } from "../../esm/atomify-kit";
+import { ATInfiniteList } from "../../es/atomify-kit";
 export default ATInfiniteList;

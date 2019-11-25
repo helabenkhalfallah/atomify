@@ -1,2 +1,2 @@
-import { ATListItemMeta } from "../../esm/atomify-kit";
+import { ATListItemMeta } from "../../es/atomify-kit";
 export default ATListItemMeta;

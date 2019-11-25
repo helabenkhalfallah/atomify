@@ -1,2 +1,2 @@
-import { ATContent } from "../../esm/atomify-kit";
+import { ATContent } from "../../es/atomify-kit";
 export default ATContent;

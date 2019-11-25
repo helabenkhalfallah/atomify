@@ -1,2 +1,2 @@
-import { ATCol } from "../../esm/atomify-kit";
+import { ATCol } from "../../es/atomify-kit";
 export default ATCol;

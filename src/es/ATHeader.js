@@ -1,2 +1,2 @@
-import { ATHeader } from "../../esm/atomify-kit";
+import { ATHeader } from "../../es/atomify-kit";
 export default ATHeader;

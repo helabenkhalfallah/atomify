@@ -1,2 +1,2 @@
-import { ATCardGrid } from "../../esm/atomify-kit";
+import { ATCardGrid } from "../../es/atomify-kit";
 export default ATCardGrid;

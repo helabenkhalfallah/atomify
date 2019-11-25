@@ -1,2 +1,2 @@
-import { ATCheckbox } from "../../esm/atomify-kit";
+import { ATCheckbox } from "../../es/atomify-kit";
 export default ATCheckbox;

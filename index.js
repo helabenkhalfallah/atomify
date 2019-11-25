@@ -1,1 +1,1 @@
-module.exports = require("./cjs/atomify-kit.js");
+module.exports = require("./es/atomify-kit.js");

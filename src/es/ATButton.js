@@ -1,2 +1,2 @@
-import { ATButton } from "../../esm/atomify-kit";
+import { ATButton } from "../../es/atomify-kit";
 export default ATButton;

@@ -1,2 +1,2 @@
-import { ATRow } from "../../esm/atomify-kit";
+import { ATRow } from "../../es/atomify-kit";
 export default ATRow;

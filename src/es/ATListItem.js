@@ -1,2 +1,2 @@
-import { ATListItem } from "../../esm/atomify-kit";
+import { ATListItem } from "../../es/atomify-kit";
 export default ATListItem;

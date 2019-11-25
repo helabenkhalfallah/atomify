@@ -1,2 +1,2 @@
-import { ATInput } from "../../esm/atomify-kit";
+import { ATInput } from "../../es/atomify-kit";
 export default ATInput;

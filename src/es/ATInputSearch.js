@@ -1,2 +1,2 @@
-import { ATInputSearch } from "../../esm/atomify-kit";
+import { ATInputSearch } from "../../es/atomify-kit";
 export default ATInputSearch;

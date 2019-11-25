@@ -1,2 +1,2 @@
-import { ATFooter } from "../../esm/atomify-kit";
+import { ATFooter } from "../../es/atomify-kit";
 export default ATFooter;

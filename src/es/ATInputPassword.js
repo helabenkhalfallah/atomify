@@ -1,2 +1,2 @@
-import { ATInputPassword } from "../../esm/atomify-kit";
+import { ATInputPassword } from "../../es/atomify-kit";
 export default ATInputPassword;

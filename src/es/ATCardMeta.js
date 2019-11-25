@@ -1,2 +1,2 @@
-import { ATCardMeta } from "../../esm/atomify-kit";
+import { ATCardMeta } from "../../es/atomify-kit";
 export default ATCardMeta;

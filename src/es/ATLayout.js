@@ -1,2 +1,2 @@
-import { ATLayout } from "../../esm/atomify-kit";
+import { ATLayout } from "../../es/atomify-kit";
 export default ATLayout;

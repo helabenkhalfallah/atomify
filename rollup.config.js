@@ -20,7 +20,7 @@ export default {
       esModule: false
     },
     {
-      file: `esm/${pkg.name}.js`,
+      file: `es/${pkg.name}.js`,
       format: "esm",
       sourcemap: true
     },
