@@ -100,7 +100,7 @@ module.exports = {
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru/),
     new MiniCssExtractPlugin({
       filename: './css/[name].css',
-    }),
+    })
     // new BundleAnalyzerPlugin(),
   ],
   optimization: {
