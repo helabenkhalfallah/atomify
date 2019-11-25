@@ -1,18 +1,20 @@
 {
   "name": "atomify-kit",
-  "version": "1.2.8",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
-  "sideEffects": [
-    "**/*.css",
-    "**/*.scss",
-    "./es/index.js",
-    "./es/configure.js"
-  ],
+  "version": "1.2.9",
   "description": "React Atoms Components Based On Ant Design",
+  "main": "index.js",
+  "module": "esm/atomify-kit.js",
+  "sideEffects": false,
+  "files": [
+    "esm",
+    "cjs",
+    "src/cjs/*",
+    "src/es/*",
+    "src/lib/*"
+  ],
   "scripts": {
     "build:esm": "rollup -c",
+    "prepare": "npm run build:esm",
     "build": "webpack --config webpack.config.js --mode production",
     "storybook": "start-storybook -p 9001 -c ./storybook/.storybook",
     "build-storybook": "build-storybook",
@@ -23,12 +25,6 @@
       "pre-commit": "npm lint"
     }
   },
-  "files": [
-    "dist",
-    "lib",
-    "styles",
-    "README"
-  ],
   "browserslist": [
     "last 2 version",
     "Firefox ESR",

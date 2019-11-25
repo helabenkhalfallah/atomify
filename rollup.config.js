@@ -11,17 +11,18 @@ import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
 export default {
-  input: 'src/lib/index.js',
+  input: "src/index.js",
   output: [
     {
-      file: pkg.main,
+      file: `cjs/${pkg.name}.js`,
       format: 'cjs',
       sourcemap: true,
+      esModule: false
     },
     {
-      file: pkg.module,
-      format: 'es',
-      sourcemap: true,
+      file: `esm/${pkg.name}.js`,
+      format: "esm",
+      sourcemap: true
     },
   ],
   plugins: [
@@ -48,7 +49,10 @@ export default {
         '@babel/plugin-syntax-dynamic-import',
         '@babel/plugin-proposal-class-properties',
         'transform-react-remove-prop-types',
+        ["@babel/transform-runtime", { useESModules: true }]
       ],
+      sourceMaps: true,
+      runtimeHelpers: true,
       exclude: 'node_modules/**',
     }),
     commonjs(),
