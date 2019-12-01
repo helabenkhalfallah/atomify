@@ -1,5 +1,7 @@
 import React from 'react';
-import List from 'antd/es/list';
+import {
+  List
+} from 'antd';
 import ViewUtils from '../utils/ViewUtils';
 
 

@@ -1,5 +1,7 @@
 import React from 'react';
-import Row from 'antd/es/row';
+import {
+  Row
+} from 'antd';
 
 const ATRow = (props) => <Row {...props} />;
 

@@ -1,5 +1,7 @@
 import React from 'react';
-import Button from 'antd/es/button';
+import {
+  Button
+} from 'antd';
 import ViewUtils from '../utils/ViewUtils';
 
 const {
