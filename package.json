@@ -1,13 +1,26 @@
 {
   "name": "atomify-kit",
-  "version": "1.3.7",
+  "version": "1.3.8",
   "description": "React Atoms Components Based On Ant Design",
-  "main": "dist/index.js",
+  "main": "./lib/index.js",
+  "module": "./es/index.js",
+  "modules.root": "./es",
+  "jsnext:main": "./es/index.js",
+  "sideEffects": false,
   "files": [
-    "src/*"
+    "src",
+    "es",
+    "lib",
+    "dist",
+    "README.md"
   ],
   "scripts": {
-    "build": "webpack --config webpack.config.js --mode production",
+    "build:lib": "babel src --out-dir lib --ignore \"src/**/__tests__\"",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es --ignore \"src/**/__tests__\"",
+    "build:umd": "cross-env NODE_ENV=development webpack src/index.js -o dist/atomify-kit.js",
+    "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js -o dist/atomify-kit.min.js",
+    "clean": "rimraf dist lib es",
+    "build": "npm run clean && npm run build:lib && npm run build:es && npm run build:umd && npm run build:umd:min",
     "storybook": "start-storybook -p 9001 -c ./storybook/.storybook",
     "build-storybook": "build-storybook",
     "prepublish": "npm run build"
@@ -48,6 +61,7 @@
     "prop-types": "=15.7.2"
   },
   "devDependencies": {
+    "@babel/cli": "=7.7.4",
     "@babel/core": "=7.6.0",
     "@babel/plugin-proposal-class-properties": "=7.7.0",
     "@babel/plugin-proposal-object-rest-spread": "=7.5.5",
@@ -70,6 +84,7 @@
     "babel-eslint": "=10.0.3",
     "babel-loader": "=8.0.6",
     "babel-plugin-import": "=1.12.2",
+    "cross-env": "^6.0.3",
     "css-loader": "=3.2.0",
     "eslint": "=6.6.0",
     "eslint-config-airbnb": "=18.0.1",
