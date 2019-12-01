@@ -1,12 +1,18 @@
 {
   "name": "atomify-kit",
-  "version": "1.4.1",
+  "version": "1.4.3",
   "description": "React Atoms Components Based On Ant Design",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "modules.root": "./es",
   "jsnext:main": "./es/index.js",
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.less",
+    "./esnext/index.js",
+    "./esnext/configure.js"
+  ],
   "files": [
     "src",
     "es",
