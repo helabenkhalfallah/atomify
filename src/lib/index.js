@@ -1,3 +1,5 @@
+import '../styles/variables.less'
+
 export { default as ATButton } from './at-button';
 export { default as ATCheckbox } from './at-checkbox';
 export { default as ATInput } from './at-input';
@@ -19,4 +21,3 @@ export { default as ATListItemMeta } from './at-list-item-meta';
 export { default as ATInfiniteList } from './at-list-infinite';
 export { default as ATTabs } from './at-tabs';
 export { default as ATTabPane } from './at-tabs-pane';
-import '../styles/variables.less'

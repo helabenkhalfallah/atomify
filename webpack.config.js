@@ -1,6 +1,6 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
-// const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -11,9 +11,8 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'index.js',
     library: 'atomify-kit',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
     publicPath: '/dist/',
-    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -100,8 +99,8 @@ module.exports = {
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru/),
     new MiniCssExtractPlugin({
       filename: './css/[name].css',
-    })
-    // new BundleAnalyzerPlugin(),
+    }),
+    new BundleAnalyzerPlugin(),
   ],
   optimization: {
     minimizer: [
