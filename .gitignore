@@ -70,3 +70,5 @@ storybook-static
 .cache
 esm
 cjs
+es/*
+lib/*
