@@ -1,5 +1,3 @@
-import './styles/variables.less'
-
 export { default as ATButton } from './lib/at-button';
 export { default as ATCheckbox } from './lib/at-checkbox';
 export { default as ATInput } from './lib/at-input';
