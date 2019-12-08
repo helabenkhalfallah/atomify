@@ -1,6 +1,6 @@
-@import '../variables.less';
+@import '../variables.scss';
 
-.@{atomify-stories}-atbutton{
+.#{atomify-stories}-atbutton{
   &__container{
     display: table;
   }

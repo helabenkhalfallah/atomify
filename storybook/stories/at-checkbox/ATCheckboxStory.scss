@@ -1,6 +1,6 @@
-@import '../variables.less';
+@import '../variables.scss';
 
-.@{atomify-stories}-atcheckbox{
+.#{atomify-stories}-atcheckbox{
   &__container{
     display: table;
   }

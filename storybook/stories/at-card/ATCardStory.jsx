@@ -8,8 +8,8 @@ import {
   ATCard,
   ATCardMeta,
   ATCardGrid,
-} from '../../../src/lib';
-import './ATCardStory.less';
+} from '../../../src';
+import './ATCardStory.scss';
 
 const ATCardStory = () => (
   <div className="atomify-stories-atcard__container">

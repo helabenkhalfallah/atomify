@@ -2,8 +2,8 @@ import React from 'react';
 import Readme from './README.md';
 import {
   ATCheckbox,
-} from '../../../src/lib';
-import './ATCheckboxStory.less';
+} from '../../../src';
+import './ATCheckboxStory.scss';
 
 const ATCheckboxStory = () => (
   <div className="atomify-stories-atcheckbox__container">

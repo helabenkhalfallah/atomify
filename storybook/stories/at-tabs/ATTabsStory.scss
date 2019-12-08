@@ -1,6 +1,6 @@
-@import '../variables.less';
+@import '../variables.scss';
 
-.@{atomify-stories}-attabs{
+.#{atomify-stories}-attabs{
   &__container{
     width: 700px;
   }

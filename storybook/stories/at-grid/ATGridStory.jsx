@@ -4,8 +4,8 @@ import Readme from './README.md';
 import {
   ATCol,
   ATRow,
-} from '../../../src/lib';
-import './ATGridStory.less';
+} from '../../../src';
+import './ATGridStory.scss';
 
 const ATGridStory = () => (
   <div>

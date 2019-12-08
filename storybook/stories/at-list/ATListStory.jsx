@@ -10,8 +10,8 @@ import {
   ATListItem,
   ATListItemMeta,
   // ATInfiniteList,
-} from '../../../src/lib';
-import './ATListStory.less';
+} from '../../../src';
+import './ATListStory.scss';
 
 const data = [
   'Racing car sprays burning fuel into crowd.',

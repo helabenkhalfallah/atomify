@@ -4,8 +4,8 @@ import Readme from './README.md';
 import {
   ATTabs,
   ATTabPane,
-} from '../../../src/lib';
-import './ATTabsStory.less';
+} from '../../../src';
+import './ATTabsStory.scss';
 
 const ATTabsStory = () => (
   <div className="atomify-stories-attabs__container">

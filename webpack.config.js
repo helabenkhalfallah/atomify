@@ -2,6 +2,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -29,24 +30,15 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          'style-loader',
-          'css-loader',
-        ],
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          // Translates CSS into CommonJS
-          'css-loader',
-          // Compiles Sass to CSS
-          'sass-loader',
-        ],
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          {
+            loader: 'css-loader'
+          }
+        ]
       },
       {
         test: /\.less$/,
@@ -62,6 +54,31 @@ module.exports = {
             },
           },
         ],
+      },
+      // Tell the DEFAULT sass-rule to ignore being used for sass imports in less files
+      {
+        test: /\.scss$/,
+        issuer: {
+          exclude: /\.less$/,
+        },
+        use: [
+          MiniCssExtractPlugin.loader,
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
+      },
+      // Define a second rule for only being used from less files
+      // This rule will only be used for converting our sass-variables to less-variables
+      {
+        test: /\.scss$/,
+        issuer: /\.less$/,
+        use: {
+          loader: require.resolve('./src/styles/sassVarsToLess.js')
+        }
       },
     ],
   },
@@ -94,7 +111,7 @@ module.exports = {
   plugins: [
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru/),
     new MiniCssExtractPlugin({
-      filename: './css/[name].css',
+      filename: './css/main.css'
     })
     // new BundleAnalyzerPlugin(),
   ],
@@ -116,6 +133,19 @@ module.exports = {
           },
         },
       }),
+      new OptimizeCSSAssetsPlugin({
+        cssProcessor: require('cssnano'),
+        cssProcessorPluginOptions: {
+          preset: [
+            'default',
+            {
+              discardComments: {
+                removeAll: true
+              }
+            }],
+        },
+        canPrint: false
+      })
     ],
   },
 };

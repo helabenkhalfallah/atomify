@@ -4,8 +4,8 @@ import {
   ATInput,
   ATInputSearch,
   ATInputPassword,
-} from '../../../src/lib';
-import './ATInputStory.less';
+} from '../../../src';
+import './ATInputStory.scss';
 
 const ATInputStory = () => (
   <div className="atomify-stories-atinput__container">

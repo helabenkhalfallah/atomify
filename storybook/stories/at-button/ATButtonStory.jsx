@@ -3,8 +3,8 @@ import React from 'react';
 import Readme from './README.md';
 import {
   ATButton,
-} from '../../../src/lib';
-import './ATButtonStory.less';
+} from '../../../src';
+import './ATButtonStory.scss';
 
 const ATButtonStory = () => (
   <div className="atomify-stories-atbutton__container">

@@ -1,6 +1,6 @@
-@import '../variables.less';
+@import '../variables.scss';
 
-.@{atomify-stories}-atcard{
+.#{atomify-stories}-atcard{
   &__container{
     display: table;
   }

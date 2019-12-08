@@ -1,9 +1,9 @@
-@import '../variables.less';
+@import '../variables.scss';
 
-.@{atomify-stories}-atgrid{
+.#{atomify-stories}-atgrid{
   &__col--1{
     text-align: center;
-    background: @primary-color;
+    background: $primary-color;
     margin-top: 10px;
     height: 40px;
   }
@@ -11,21 +11,21 @@
   &__col--2{
     margin-top: 10px;
     text-align: center;
-    background: @info-color;
+    background: $info-color;
     height: 40px;
   }
 
   &__col--3{
     margin-top: 10px;
     text-align: center;
-    background: @processing-color;
+    background: $processing-color;
     height: 40px;
   }
 
   &__col--4{
     margin-top: 10px;
     text-align: center;
-    background: @warning-color;
+    background: $warning-color;
     height: 40px;
   }
 }

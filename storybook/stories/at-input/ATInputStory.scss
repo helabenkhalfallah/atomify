@@ -1,6 +1,6 @@
-@import '../variables.less';
+@import '../variables.scss';
 
-.@{atomify-stories}-atinput{
+.#{atomify-stories}-atinput{
   &__container{
     display: table;
   }

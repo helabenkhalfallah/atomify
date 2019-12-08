@@ -1,6 +1,6 @@
-@import '../variables.less';
+@import '../variables.scss';
 
-.@{atomify-stories}-colors{
+.#{atomify-stories}-colors{
   &__container{
     margin-top: 10px;
   }
@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: @primary-color;
+    background: $primary-color;
     margin-right: 2px;
     height: 100px;
   }
@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: @info-color;
+    background: $info-color;
     margin-right: 2px;
     height: 100px;
   }
@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: @processing-color;
+    background: $processing-color;
     margin-right: 2px;
     height: 100px;
   }
@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: @warning-color;
+    background: $warning-color;
     margin-right: 2px;
     height: 100px;
   }
@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: @error-color;
+    background: $error-color;
     margin-right: 2px;
     height: 100px;
   }
@@ -54,7 +54,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: @disabled-color;
+    background: $disabled-color;
     margin-right: 2px;
     height: 100px;
   }
@@ -63,7 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: @text-color;
+    background: $text-color;
     color: white;
     margin-right: 2px;
     height: 100px;
@@ -73,7 +73,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: @border-color-base;
+    background: $border-color-base;
     margin-right: 2px;
     height: 100px;
   }

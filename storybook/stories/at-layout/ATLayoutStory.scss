@@ -1,0 +1,23 @@
+@import '../variables.scss';
+
+.#{atomify-stories}-atlayout{
+  &__layout{
+    margin-top: 10px;
+  }
+  &__header{
+    background-color: $info-color;
+    min-height: 80px;
+  }
+  &__footer{
+    background-color: $error-color;
+    min-height: 80px;
+  }
+  &__content{
+    background-color: $processing-color;
+    min-height: 120px;
+  }
+  &__sider{
+    background-color: $normal-color;
+    min-height: 120px;
+  }
+}

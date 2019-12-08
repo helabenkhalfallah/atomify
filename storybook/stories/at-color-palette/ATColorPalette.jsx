@@ -2,9 +2,9 @@ import React from 'react';
 import {
   ATCol,
   ATRow,
-} from '../../../src/lib';
+} from '../../../src';
 import Readme from './README.md';
-import './ATColorPalette.less';
+import './ATColorPalette.scss';
 
 const ATColorPalette = () => (
   <div>
