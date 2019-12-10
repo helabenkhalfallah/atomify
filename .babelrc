@@ -15,7 +15,17 @@
         "libraryName": "antd",
         "libraryDirectory": "es",
         "style": true
-      }
+      },
+      "antd"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "atomify-kit",
+        "libraryDirectory": "es",
+        "style": true
+      },
+      "atomify-kit"
     ]
   ]
 }

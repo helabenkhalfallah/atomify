@@ -15,7 +15,6 @@ $btn-square-size: $btn-height-base;
 $btn-square-size-lg: $btn-height-lg;
 $btn-square-size-sm: $btn-height-sm;
 
-
 // colors
 $btn-border-radius-base: $border-radius-base;
 $btn-border-radius-sm: $border-radius-base;
@@ -38,12 +37,12 @@ $btn-disable-border: $disabled-bg;
 $btn-group-border: $primary-5;
 
 // link
-$link-color:$primary-color; // link color
+$link-color: $primary-color; // link color
 $link-hover-color: rgba($primary-color, 0.5);
 $link-active-color: rgba($primary-color, 0.5);
 $link-decoration: none;
 $link-hover-decoration: none;
 
-.ant-btn-icon-only{
+.ant-btn-icon-only {
   font-size: 1.25rem;
 }

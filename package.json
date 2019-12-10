@@ -1,11 +1,14 @@
 {
   "name": "atomify-kit",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "modules.root": "./es",
   "jsnext:main": "./es/index.js",
   "sideEffects": [
+    "dist/*",
+    "es/**/style/*",
+    "lib/**/style/*",
     "**/*.css",
     "**/*.scss",
     "**/*.less",

@@ -36,7 +36,11 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
           }
         ]
       },
@@ -45,7 +49,11 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader', // translates CSS into CommonJS
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
           },
           {
             loader: 'less-loader', // compiles Less to CSS
@@ -66,7 +74,13 @@ module.exports = {
           // Creates `style` nodes from JS strings
           'style-loader',
           // Translates CSS into CommonJS
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
+          },
           // Compiles Sass to CSS
           'sass-loader',
         ],
