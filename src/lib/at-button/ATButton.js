@@ -3,6 +3,7 @@ import {
   Button
 } from 'antd';
 import ViewUtils from '../utils/ViewUtils';
+import './style';
 
 const {
   renderSubViews,

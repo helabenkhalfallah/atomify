@@ -19,4 +19,3 @@ export { default as ATListItemMeta } from './lib/at-list-item-meta';
 export { default as ATInfiniteList } from './lib/at-list-infinite';
 export { default as ATTabs } from './lib/at-tabs';
 export { default as ATTabPane } from './lib/at-tabs-pane';
-import './styles/theme.less'
