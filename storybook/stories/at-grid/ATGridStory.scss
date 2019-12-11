@@ -1,32 +1,31 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
-.#{atomify-stories}-atgrid{
-  &__col--1{
+.#{atomify-stories}-atgrid {
+  &__col--1 {
     text-align: center;
-    background: $primary-color;
+    background: red;
     margin-top: 10px;
     height: 40px;
   }
 
-  &__col--2{
+  &__col--2 {
     margin-top: 10px;
     text-align: center;
-    background: $info-color;
+    background: black;
     height: 40px;
   }
 
-  &__col--3{
+  &__col--3 {
     margin-top: 10px;
     text-align: center;
-    background: $processing-color;
+    background: blue;
     height: 40px;
   }
 
-  &__col--4{
+  &__col--4 {
     margin-top: 10px;
     text-align: center;
-    background: $warning-color;
+    background: violet;
     height: 40px;
   }
 }
-

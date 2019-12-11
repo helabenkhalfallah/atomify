@@ -22,7 +22,7 @@
       "import",
       {
         "libraryName": "atomify-kit",
-        "libraryDirectory": "es",
+        "libraryDirectory": "es/lib",
         "style": true
       },
       "atomify-kit"

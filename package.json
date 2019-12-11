@@ -1,6 +1,6 @@
 {
   "name": "atomify-kit",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "modules.root": "./es",
@@ -11,9 +11,7 @@
     "lib/**/style/*",
     "**/*.css",
     "**/*.scss",
-    "**/*.less",
-    "./esnext/index.js",
-    "./esnext/configure.js"
+    "**/*.less"
   ],
   "files": [
     "src",
@@ -23,8 +21,8 @@
     "README.md"
   ],
   "scripts": {
-    "build:lib": "babel src --out-dir lib --ignore \"src/**/__tests__\"",
-    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es --ignore \"src/**/__tests__\"",
+    "build:lib": "babel src --out-dir lib --ignore \"src/**/__tests__\" --copy-files",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es --ignore \"src/**/__tests__\" --copy-files",
     "build:umd": "cross-env NODE_ENV=production webpack src/index.js -o dist/atomify-kit.js",
     "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js -o dist/atomify-kit.min.js",
     "clean": "rimraf dist lib es",
@@ -93,9 +91,9 @@
     "babel-eslint": "=10.0.3",
     "babel-loader": "=8.0.6",
     "babel-plugin-import": "=1.12.2",
-    "cross-env": "^6.0.3",
+    "cross-env": "=6.0.3",
     "css-loader": "=3.2.0",
-    "cssnano": "^4.1.10",
+    "cssnano": "=4.1.10",
     "eslint": "=6.6.0",
     "eslint-config-airbnb": "=18.0.1",
     "eslint-plugin-import": "=2.18.2",
@@ -105,12 +103,12 @@
     "less": "=3.10.3",
     "less-loader": "=5.0.0",
     "mini-css-extract-plugin": "=0.8.0",
-    "node-sass": "^4.13.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "purgecss-webpack-plugin": "^1.6.0",
+    "node-sass": "=4.13.0",
+    "optimize-css-assets-webpack-plugin": "=5.0.3",
+    "purgecss-webpack-plugin": "=1.6.0",
     "react": "=16.12.0",
     "react-dom": "=16.12.0",
-    "sass-loader": "^8.0.0",
+    "sass-loader": "=8.0.0",
     "storybook-readme": "=5.0.8",
     "style-loader": "=1.0.0",
     "terser-webpack-plugin": "=2.2.1",

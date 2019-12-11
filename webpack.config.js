@@ -36,11 +36,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader
           },
           {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              modules: true
-            }
+            loader: 'css-loader'
           }
         ]
       },
@@ -49,11 +45,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              modules: true
-            }
+            loader: 'css-loader'
           },
           {
             loader: 'less-loader', // compiles Less to CSS
@@ -75,11 +67,7 @@ module.exports = {
           'style-loader',
           // Translates CSS into CommonJS
           {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              modules: true
-            }
+            loader: 'css-loader'
           },
           // Compiles Sass to CSS
           'sass-loader',
@@ -125,7 +113,7 @@ module.exports = {
   plugins: [
     new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /ru/),
     new MiniCssExtractPlugin({
-      filename: './css/main.css'
+      filename: "./css/main.css"
     })
     // new BundleAnalyzerPlugin(),
   ],
