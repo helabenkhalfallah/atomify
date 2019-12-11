@@ -5,7 +5,7 @@ import {
   ATTabs,
   ATTabPane,
 } from '../../../src';
-import './ATTabsStory.scss';
+import './ATTabsStory.less';
 
 const ATTabsStory = () => (
   <div className="atomify-stories-attabs__container">

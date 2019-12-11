@@ -1,1 +1,1 @@
-import './ATGrid.scss';
+import './ATGrid.less';

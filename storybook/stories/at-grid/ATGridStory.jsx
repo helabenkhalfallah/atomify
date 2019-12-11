@@ -5,7 +5,7 @@ import {
   ATCol,
   ATRow,
 } from '../../../src';
-import './ATGridStory.scss';
+import './ATGridStory.less';
 
 const ATGridStory = () => (
   <div>

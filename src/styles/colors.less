@@ -1,0 +1,57 @@
+// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+// https://github.com/ant-design/ant-design/blob/master/components/button/style/mixin.less
+
+// fonts
+@font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+  'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
+@code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+
+// define here global theme values
+@body-background: #fff;
+@component-background: #FFFFFF;
+@primary-color: #f52220; // primary color for all components
+@info-color: #4ebaca;
+@processing-color: #faad14;
+@success-color: #3ac596; // success state color
+@warning-color: #e74c3c; // warning state color
+@error-color: #e82d50; // error state color
+@disabled-color : #d9d9d9; // disable state color
+@highlight-color: #f52220;
+@normal-color: #d9d9d9;
+@white: #fff;
+@black: #000;
+
+// primary color
+@primary-1: rgba(@primary-color, 0.9); // replace tint(@primary-color, 90%)
+@primary-2: rgba(@primary-color, 0.8); // replace tint(@primary-color, 80%)
+@primary-5: rgba(@primary-color, 0.9); // color used to control the text color in many active and hover states, replace tint(@primary-color, 20%)
+@primary-6: @primary-color; // color used to control the text color of active buttons, don't use, use @primary-color
+@primary-7: rgba(@primary-color, 0.05); // replace shade(@primary-color, 5%)
+
+// text
+@text-color: #000000;
+@text-color-dark: #333;
+@text-color-secondary-dark: #666;
+@text-selection-bg: @primary-color;
+@text-color-secondary: #999;
+@text-color-inverse: @white;
+
+// Outline
+@outline-blur-size: 0;
+@outline-width: 2px;
+@outline-color: @primary-color;
+@background-color-light: #dedede; // background of header and selected item
+@background-color-base: #999; // Default grey background color
+
+// Disabled states
+@disabled-bg: @background-color-base;
+@disabled-color-dark:#999;
+
+// border
+@border-color-base: #d3d3d3;
+@border-style-base: solid; // style of a components border
+
+// head
+@heading-color: fade(#000, 85%);
+@heading-color-dark: fade(@white, 100%);

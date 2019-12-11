@@ -8,7 +8,7 @@ import {
   ATLayout,
   ATSider,
 } from '../../../src';
-import './ATLayoutStory.scss';
+import './ATLayoutStory.less';
 
 const ATLayoutStory = () => (
   <div>

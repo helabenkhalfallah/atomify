@@ -1,1 +1,1 @@
-import './ATTabs.scss';
+import './ATTabs.less';

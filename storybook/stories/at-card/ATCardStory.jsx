@@ -9,7 +9,7 @@ import {
   ATCardMeta,
   ATCardGrid,
 } from '../../../src';
-import './ATCardStory.scss';
+import './ATCardStory.less';
 
 const ATCardStory = () => (
   <div className="atomify-stories-atcard__container">

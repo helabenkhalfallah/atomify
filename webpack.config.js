@@ -30,22 +30,31 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          {
-            loader: 'css-loader'
-          }
-        ]
+          MiniCssExtractPlugin.loader,
+          'style-loader',
+          'css-loader',
+        ],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
+        ],
       },
       {
         test: /\.less$/,
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader'
+            loader: 'css-loader', // translates CSS into CommonJS
           },
           {
             loader: 'less-loader', // compiles Less to CSS
@@ -54,33 +63,6 @@ module.exports = {
             },
           },
         ],
-      },
-      // Tell the DEFAULT sass-rule to ignore being used for sass imports in less files
-      {
-        test: /\.scss$/,
-        issuer: {
-          exclude: /\.less$/,
-        },
-        use: [
-          MiniCssExtractPlugin.loader,
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          // Translates CSS into CommonJS
-          {
-            loader: 'css-loader'
-          },
-          // Compiles Sass to CSS
-          'sass-loader',
-        ],
-      },
-      // Define a second rule for only being used from less files
-      // This rule will only be used for converting our sass-variables to less-variables
-      {
-        test: /\.scss$/,
-        issuer: /\.less$/,
-        use: {
-          loader: require.resolve('./src/styles/sassVarsToLess.js')
-        }
       },
     ],
   },

@@ -1,6 +1,6 @@
 {
   "name": "atomify-kit",
-  "version": "1.4.7",
+  "version": "1.4.9",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "modules.root": "./es",

@@ -4,7 +4,7 @@ import {
   ATRow,
 } from '../../../src';
 import Readme from './README.md';
-import './ATColorPalette.scss';
+import './ATColorPalette.less';
 
 const ATColorPalette = () => (
   <div>

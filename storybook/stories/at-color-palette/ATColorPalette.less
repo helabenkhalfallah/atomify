@@ -1,80 +1,81 @@
-@import "../variables.scss";
+@import '../variables.less';
 
-.#{atomify-stories}-colors {
-  &__container {
+.@{atomify-stories}-colors{
+  &__container{
     margin-top: 10px;
   }
-
-  &__colors--box-primary {
+  
+  &__colors--box-primary{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f52220;
+    background: @primary-color;
     margin-right: 2px;
     height: 100px;
   }
 
-  &__colors--box-info {
+  &__colors--box-info{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #4ebaca;
+    background: @info-color;
     margin-right: 2px;
     height: 100px;
   }
 
-  &__colors--box-processing {
+  &__colors--box-processing{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #faad14;
+    background: @processing-color;
     margin-right: 2px;
     height: 100px;
   }
 
-  &__colors--box-warning {
+  &__colors--box-warning{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e74c3c;
+    background: @warning-color;
     margin-right: 2px;
     height: 100px;
   }
 
-  &__colors--box-error {
+  &__colors--box-error{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e82d50;
+    background: @error-color;
     margin-right: 2px;
     height: 100px;
   }
 
-  &__colors--box-disabled {
+  &__colors--box-disabled{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #d9d9d9;
+    background: @disabled-color;
     margin-right: 2px;
     height: 100px;
   }
 
-  &__colors--box-text-color {
+  &__colors--box-text-color{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000000;
+    background: @text-color;
     color: white;
     margin-right: 2px;
     height: 100px;
   }
 
-  &__colors--box-border-color {
+  &__colors--box-border-color{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #d3d3d3;
+    background: @border-color-base;
     margin-right: 2px;
     height: 100px;
   }
 }
+

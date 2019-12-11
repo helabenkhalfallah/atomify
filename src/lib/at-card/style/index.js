@@ -1,1 +1,1 @@
-import './ATCard.scss';
+import './ATCard.less';

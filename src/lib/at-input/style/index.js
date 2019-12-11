@@ -1,1 +1,1 @@
-import './ATInput.scss';
+import './ATInput.less';

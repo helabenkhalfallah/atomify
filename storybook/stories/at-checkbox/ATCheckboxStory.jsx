@@ -3,7 +3,7 @@ import Readme from './README.md';
 import {
   ATCheckbox,
 } from '../../../src';
-import './ATCheckboxStory.scss';
+import './ATCheckboxStory.less';
 
 const ATCheckboxStory = () => (
   <div className="atomify-stories-atcheckbox__container">

@@ -4,7 +4,7 @@ import Readme from './README.md';
 import {
   ATButton,
 } from '../../../src';
-import './ATButtonStory.scss';
+import './ATButtonStory.less';
 
 const ATButtonStory = () => (
   <div className="atomify-stories-atbutton__container">

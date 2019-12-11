@@ -5,7 +5,7 @@ import {
   ATInputSearch,
   ATInputPassword,
 } from '../../../src';
-import './ATInputStory.scss';
+import './ATInputStory.less';
 
 const ATInputStory = () => (
   <div className="atomify-stories-atinput__container">

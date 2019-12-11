@@ -1,1 +1,1 @@
-import './ATButton.scss';
+import './ATButton.less';

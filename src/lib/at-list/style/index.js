@@ -1,1 +1,1 @@
-import './ATList.scss';
+import './ATList.less';

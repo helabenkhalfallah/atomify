@@ -1,0 +1,31 @@
+@import "../../../styles/variables.less";
+
+// size
+@card-head-padding: 16px;
+@card-inner-head-padding: 12px;
+@card-padding-base: 24px;
+@card-radius: @border-radius-sm;
+@card-border-width: 1px;
+
+// color
+@card-border-color: #e8e8e8;
+@card-actions-bg-color: #e8e8e8;
+@card-head-color: @heading-color;
+@card-head-background: transparent;
+@card-actions-background: @background-color-light;
+@card-skeleton-bg: #cfd8dc;
+@card-background: @component-background;
+@card-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+
+.ant-card-bordered {
+  border: @card-border-width solid @card-border-color;
+}
+
+.ant-card-head {
+  border-bottom: @card-border-width solid @card-border-color;
+}
+
+.ant-card-actions {
+  background: @card-actions-bg-color;
+  border-top: 2px solid @card-actions-bg-color;
+}

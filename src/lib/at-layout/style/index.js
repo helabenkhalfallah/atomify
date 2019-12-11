@@ -1,1 +1,1 @@
-import './ATLayout.scss';
+import './ATLayout.less';

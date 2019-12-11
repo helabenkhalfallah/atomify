@@ -1,1 +1,1 @@
-import './ATCheckbox.scss';
+import './ATCheckbox.less';

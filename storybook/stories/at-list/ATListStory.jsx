@@ -11,7 +11,7 @@ import {
   ATListItemMeta,
   // ATInfiniteList,
 } from '../../../src';
-import './ATListStory.scss';
+import './ATListStory.less';
 
 const data = [
   'Racing car sprays burning fuel into crowd.',
